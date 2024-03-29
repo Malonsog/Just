@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.just.cl/assets/imagenes/favicon.ico">
+    <link rel="manifest" href="https://www.swissjustchile.cl/herramientas/origen/manifest.json">
+    <link rel="apple-touch-icon" href="https://www.swissjustchile.cl/herramientas/origen/img/origen_apple_icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+    <!-- Enlace a la hoja de estilo de Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Enlace a la hoja de estilo local -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Enlaces a los scripts de Bootstrap (JavaScript) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+    <title>Camino al origen | Just</title>
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header>
+    <div class="d-flex justify-content-center">
+        <a href="https://www.just.cl/">
+            <img src="img/logo_camino_al_origen.png" alt="Camino al origen">
+        </a>
+    </div>
+</header>
+
+<!-- Contenido -->
+<main>
+    <h1>Camino al origen</h1>
+    <div class="d-flex justify-content-center mt-5">
+        <p style="width: 450px">
+            <label for="campoBusqueda">Escribe tu clave de consultor/a y revisa tus siguientes pasos para llegar al
+                origen.
+            </label>
+        </p>
+    </div>
+
+    <!-- Campo de búsqueda -->
+    <div class="input-group d-flex justify-content-center">
+        <form method="POST" action="buscar.php">
+            <input type="text" class="form-control" id="campoBusqueda" name="campoBusqueda" pattern="[0-9]+"
+                   title="Ingresa solo números" required>
+            <div class="input-group-append">
+                <button class="btn btn-primary m-3" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    Buscar
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Fin del campo de búsqueda -->
+
+    <!-- Fin del contenido -->
+</main>
+
+<!-- Pie de página -->
+<footer>
+    <a href="https://www.swissjustchile.cl/herramientas/">
+        <img src="img/logo_footer.svg" alt="Hacer bien nos hace bien">
+    </a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Camino al origen | Just",
+  "short_name": "Camino al origen | Just",
+  "description": "Revisa tus metas para el Camino al Origen de Just.",
+  "start_url": "https://www.swissjustchile.cl/herramientas/origen/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#59630c",
+  "icons": [
+    {
+      "src": "https://www.swissjustchile.cl/herramientas/origen/img/origen_android_icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
