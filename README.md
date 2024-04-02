@@ -64,7 +64,7 @@ estándares de la marca y proporcionar una experiencia visual atractiva y cohere
 
 ---
 <a id="eng"></a>
-### 🇺🇸 English
+## 🇺🇸 English
 
 This is the repository for the **_Just - Path to Origin_** website.
 
