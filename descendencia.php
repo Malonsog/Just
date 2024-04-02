@@ -1,4 +1,4 @@
-<!-- grupo.php -->
+<!-- descendencia.php -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -55,6 +55,9 @@
     $claveConsultor = $_POST['claveConsultor'];
 
     // Consulta SQL para obtener información del grupo
+    // (Tener presente que en la bbdd hay una diferencia entre NULL y 0,
+    // Los períodos que aún no tienen datos deberían estar como NULL para no confundirlos con
+    // los meses en que la venta o incorporación fue 0)
     $sqlDescendencia = "
 SELECT DISTINCT
 	clave,
@@ -86,187 +89,187 @@ SELECT DISTINCT
 		END AS meta_ventas_p04,
 	CASE
 		WHEN meta_incorporaciones_p04 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p04 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p04 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p04
 		END AS meta_incorporaciones_p04,
 	CASE
 		WHEN ventas_p04 IS NULL THEN '-'
-		WHEN ventas_p04 = 0 THEN '-'
+		/*WHEN ventas_p04 = 0 THEN '-'*/
 		ELSE ventas_p04
 		END AS ventas_p04,
 	CASE
 		WHEN incorporaciones_p04 IS NULL THEN '-'
-		WHEN incorporaciones_p04 = 0 THEN '-'
+		/*WHEN incorporaciones_p04 = 0 THEN '-'*/
 		ELSE incorporaciones_p04
 		END AS incorporaciones_p04,
 	CASE
 		WHEN meta_ventas_p05 IS NULL THEN '-'
-		WHEN meta_ventas_p05 = 0 THEN '-'
+		/*WHEN meta_ventas_p05 = 0 THEN '-'*/
 		ELSE meta_ventas_p05
 		END AS meta_ventas_p05,
 	CASE
 		WHEN meta_incorporaciones_p05 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p05 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p05 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p05
 		END AS meta_incorporaciones_p05,
 	CASE
 		WHEN ventas_p05 IS NULL THEN '-'
-		WHEN ventas_p05 = 0 THEN '-'
+		/*WHEN ventas_p05 = 0 THEN '-'*/
 		ELSE ventas_p05
 		END AS ventas_p05,
 	CASE
 		WHEN incorporaciones_p05 IS NULL THEN '-'
-		WHEN incorporaciones_p05 = 0 THEN '-'
+		/*WHEN incorporaciones_p05 = 0 THEN '-'*/
 		ELSE incorporaciones_p05
 		END AS incorporaciones_p05,
 	CASE
 		WHEN meta_ventas_p06 IS NULL THEN '-'
-		WHEN meta_ventas_p06 = 0 THEN '-'
+		/*WHEN meta_ventas_p06 = 0 THEN '-'*/
 		ELSE meta_ventas_p06
 		END AS meta_ventas_p06,
 	CASE
 		WHEN meta_incorporaciones_p06 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p06 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p06 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p06
 		END AS meta_incorporaciones_p06,
 	CASE
 		WHEN ventas_p06 IS NULL THEN '-'
-		WHEN ventas_p06 = 0 THEN '-'
+		/*WHEN ventas_p06 = 0 THEN '-'*/
 		ELSE ventas_p06
 		END AS ventas_p06,
 	CASE
 		WHEN incorporaciones_p06 IS NULL THEN '-'
-		WHEN incorporaciones_p06 = 0 THEN '-'
+		/*WHEN incorporaciones_p06 = 0 THEN '-'*/
 		ELSE incorporaciones_p06
 		END AS incorporaciones_p06,
 	CASE
 		WHEN meta_ventas_p07 IS NULL THEN '-'
-		WHEN meta_ventas_p07 = 0 THEN '-'
+		/*WHEN meta_ventas_p07 = 0 THEN '-'*/
 		ELSE meta_ventas_p07
 		END AS meta_ventas_p07,
 	CASE
 		WHEN meta_incorporaciones_p07 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p07 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p07 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p07
 		END AS meta_incorporaciones_p07,
 	CASE
 		WHEN ventas_p07 IS NULL THEN '-'
-		WHEN ventas_p07 = 0 THEN '-'
+		/*WHEN ventas_p07 = 0 THEN '-'*/
 		ELSE ventas_p07
 		END AS ventas_p07,
 	CASE
 		WHEN incorporaciones_p07 IS NULL THEN '-'
-		WHEN incorporaciones_p07 = 0 THEN '-'
+		/*WHEN incorporaciones_p07 = 0 THEN '-'*/
 		ELSE incorporaciones_p07
 		END AS incorporaciones_p07,
 	CASE
 		WHEN meta_ventas_p08 IS NULL THEN '-'
-		WHEN meta_ventas_p08 = 0 THEN '-'
+		/*WHEN meta_ventas_p08 = 0 THEN '-'*/
 		ELSE meta_ventas_p08
 		END AS meta_ventas_p08,
 	CASE
 		WHEN meta_incorporaciones_p08 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p08 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p08 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p08
 		END AS meta_incorporaciones_p08,
 	CASE
 		WHEN ventas_p08 IS NULL THEN '-'
-		WHEN ventas_p08 = 0 THEN '-'
+		/*WHEN ventas_p08 = 0 THEN '-'*/
 		ELSE ventas_p08
 		END AS ventas_p08,
 	CASE
 		WHEN incorporaciones_p08 IS NULL THEN '-'
-		WHEN incorporaciones_p08 = 0 THEN '-'
+		/*WHEN incorporaciones_p08 = 0 THEN '-'*/
 		ELSE incorporaciones_p08
 		END AS incorporaciones_p08,
 	CASE
 		WHEN meta_ventas_p09 IS NULL THEN '-'
-		WHEN meta_ventas_p09 = 0 THEN '-'
+		/*WHEN meta_ventas_p09 = 0 THEN '-'*/
 		ELSE meta_ventas_p09
 		END AS meta_ventas_p09,
 	CASE
 		WHEN meta_incorporaciones_p09 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p09 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p09 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p09
 		END AS meta_incorporaciones_p09,
 	CASE
 		WHEN ventas_p09 IS NULL THEN '-'
-		WHEN ventas_p09 = 0 THEN '-'
+		/*WHEN ventas_p09 = 0 THEN '-'*/
 		ELSE ventas_p09
 		END AS ventas_p09,
 	CASE
 		WHEN incorporaciones_p09 IS NULL THEN '-'
-		WHEN incorporaciones_p09 = 0 THEN '-'
+		/*WHEN incorporaciones_p09 = 0 THEN '-'*/
 		ELSE incorporaciones_p09
 		END AS incorporaciones_p09,
 	CASE
 		WHEN meta_ventas_p10 IS NULL THEN '-'
-		WHEN meta_ventas_p10 = 0 THEN '-'
+		/*WHEN meta_ventas_p10 = 0 THEN '-'*/
 		ELSE meta_ventas_p10
 		END AS meta_ventas_p10,
 	CASE
 		WHEN meta_incorporaciones_p10 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p10 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p10 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p10
 		END AS meta_incorporaciones_p10,
 	CASE
 		WHEN ventas_p10 IS NULL THEN '-'
-		WHEN ventas_p10 = 0 THEN '-'
+		/*WHEN ventas_p10 = 0 THEN '-'*/
 		ELSE ventas_p10
 		END AS ventas_p10,
 	CASE
 		WHEN incorporaciones_p10 IS NULL THEN '-'
-		WHEN incorporaciones_p10 = 0 THEN '-'
+		/*WHEN incorporaciones_p10 = 0 THEN '-'*/
 		ELSE incorporaciones_p10
 		END AS incorporaciones_p10,
 	CASE
 		WHEN meta_ventas_p11 IS NULL THEN '-'
-		WHEN meta_ventas_p11 = 0 THEN '-'
+		/*WHEN meta_ventas_p11 = 0 THEN '-'*/
 		ELSE meta_ventas_p11
 		END AS meta_ventas_p11,
 	CASE
 		WHEN meta_incorporaciones_p11 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p11 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p11 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p11
 		END AS meta_incorporaciones_p11,
 	CASE
 		WHEN ventas_p11 IS NULL THEN '-'
-		WHEN ventas_p11 = 0 THEN '-'
+		/*WHEN ventas_p11 = 0 THEN '-'*/
 		ELSE ventas_p11
 		END AS ventas_p11,
 	CASE
 		WHEN incorporaciones_p11 IS NULL THEN '-'
-		WHEN incorporaciones_p11 = 0 THEN '-'
+		/*WHEN incorporaciones_p11 = 0 THEN '-'*/
 		ELSE incorporaciones_p11
 		END AS incorporaciones_p11,
 	CASE
 		WHEN meta_ventas_p12 IS NULL THEN '-'
-		WHEN meta_ventas_p12 = 0 THEN '-'
+		/*WHEN meta_ventas_p12 = 0 THEN '-'*/
 		ELSE meta_ventas_p12
 		END AS meta_ventas_p12,
 	CASE
 		WHEN meta_incorporaciones_p12 IS NULL THEN '-'
-		WHEN meta_incorporaciones_p12 = 0 THEN '-'
+		/*WHEN meta_incorporaciones_p12 = 0 THEN '-'*/
 		ELSE meta_incorporaciones_p12
 		END AS meta_incorporaciones_p12,
 	CASE
 		WHEN ventas_p12 IS NULL THEN '-'
-		WHEN ventas_p12 = 0 THEN '-'
+		/*WHEN ventas_p12 = 0 THEN '-'*/
 		ELSE ventas_p12
 		END AS ventas_p12,
 	CASE
 		WHEN incorporaciones_p12 IS NULL THEN '-'
-		WHEN incorporaciones_p12 = 0 THEN '-'
+		/*WHEN incorporaciones_p12 = 0 THEN '-'*/
 		ELSE incorporaciones_p12
 		END AS incorporaciones_p12
 FROM
 	base_origen
-		JOIN
-		(SELECT
-			 info_grupos.nombre_grupo,
-			 info_grupos.nombre_lider
-		 FROM
-			 info_grupos) AS ngnl ON grupo_sistema = nombre_grupo
+    JOIN
+    (SELECT
+         info_grupos.nombre_grupo,
+         info_grupos.nombre_lider
+     FROM
+         info_grupos) AS ngnl ON grupo_sistema = nombre_grupo
 WHERE
 	upline = $claveConsultor
 	AND inc_orig = $claveConsultor
@@ -346,53 +349,76 @@ ORDER BY
                         </tr>
                     </thead>";
             // Asignar variables y dar formato a números:
+            // (Los valores de moneda se almacenan en 2 variables distintas, una formateada como "$xxx.xxx" para mostrar
+            // y otra como int para comparar si se cumple la meta)
             while ($rowGrupo = $resultGrupo->fetch_assoc()) {
                 $clave = $rowGrupo['clave'];
                 $nombre = $rowGrupo['nombre'];
                 $grupo = $rowGrupo['grupo_sistema'];
                 $nombreLider = $rowGrupo['nombre_lider'];
-                $metaVentasP03 = $rowGrupo['meta_ventas_p03'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p03'], 0, ',', '.') : '-';
+                $metaVentasP03 = $rowGrupo['meta_ventas_p03'];
+                $metaVentasP03Formateado = $rowGrupo['meta_ventas_p03'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p03'], 0, ',', '.') : '-';
                 $metaIncorporacionesP03 = $rowGrupo['meta_incorporaciones_p03'];
-                $ventasP03 = $rowGrupo['ventas_p03'] !== '-' ? '$' . number_format($rowGrupo['ventas_p03'], 0, ',', '.') : '-';
+                $ventasP03 = $rowGrupo['ventas_p03'];
+                $ventasP03Formateado = $rowGrupo['ventas_p03'] !== '-' ? '$' . number_format($rowGrupo['ventas_p03'], 0, ',', '.') : '-';
                 $incorporacionesP03 = $rowGrupo['incorporaciones_p03'];
-                $metaVentasP04 = $rowGrupo['meta_ventas_p04'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p04'], 0, ',', '.') : '-';
+                $metaVentasP04 = $rowGrupo['meta_ventas_p04'];
+                $metaVentasP04Formateado = $rowGrupo['meta_ventas_p04'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p04'], 0, ',', '.') : '-';
                 $metaIncorporacionesP04 = $rowGrupo['meta_incorporaciones_p04'];
-                $ventasP04 = $rowGrupo['ventas_p04'] !== '-' ? '$' . number_format($rowGrupo['ventas_p04'], 0, ',', '.') : '-';
+                $ventasP04 = $rowGrupo['ventas_p04'];
+                $ventasP04Formateado = $rowGrupo['ventas_p04'] !== '-' ? '$' . number_format($rowGrupo['ventas_p04'], 0, ',', '.') : '-';
                 $incorporacionesP04 = $rowGrupo['incorporaciones_p04'];
-                $metaVentasP05 = $rowGrupo['meta_ventas_p05'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p05'], 0, ',', '.') : '-';
+                $metaVentasP05 = $rowGrupo['meta_ventas_p05'];
+                $metaVentasP05Formateado = $rowGrupo['meta_ventas_p05'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p05'], 0, ',', '.') : '-';
                 $metaIncorporacionesP05 = $rowGrupo['meta_incorporaciones_p05'];
-                $ventasP05 = $rowGrupo['ventas_p05'] !== '-' ? '$' . number_format($rowGrupo['ventas_p05'], 0, ',', '.') : '-';
+                $ventasP05 = $rowGrupo['ventas_p05'];
+                $ventasP05Formateado = $rowGrupo['ventas_p05'] !== '-' ? '$' . number_format($rowGrupo['ventas_p05'], 0, ',', '.') : '-';
                 $incorporacionesP05 = $rowGrupo['incorporaciones_p05'];
-                $metaVentasP06 = $rowGrupo['meta_ventas_p06'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p06'], 0, ',', '.') : '-';
+                $metaVentasP06 = $rowGrupo['meta_ventas_p06'];
+                $metaVentasP06Formateado = $rowGrupo['meta_ventas_p06'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p06'], 0, ',', '.') : '-';
                 $metaIncorporacionesP06 = $rowGrupo['meta_incorporaciones_p06'];
-                $ventasP06 = $rowGrupo['ventas_p06'] !== '-' ? '$' . number_format($rowGrupo['ventas_p06'], 0, ',', '.') : '-';
+                $ventasP06 = $rowGrupo['ventas_p06'];
+                $ventasP06Formateado = $rowGrupo['ventas_p06'] !== '-' ? '$' . number_format($rowGrupo['ventas_p06'], 0, ',', '.') : '-';
                 $incorporacionesP06 = $rowGrupo['incorporaciones_p06'];
-                $metaVentasP07 = $rowGrupo['meta_ventas_p07'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p07'], 0, ',', '.') : '-';
+                $metaVentasP07 = $rowGrupo['meta_ventas_p07'];
+                $metaVentasP07Formateado = $rowGrupo['meta_ventas_p07'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p07'], 0, ',', '.') : '-';
                 $metaIncorporacionesP07 = $rowGrupo['meta_incorporaciones_p07'];
-                $ventasP07 = $rowGrupo['ventas_p07'] !== '-' ? '$' . number_format($rowGrupo['ventas_p07'], 0, ',', '.') : '-';
+                $ventasP07 = $rowGrupo['ventas_p07'];
+                $ventasP07Formateado = $rowGrupo['ventas_p07'] !== '-' ? '$' . number_format($rowGrupo['ventas_p07'], 0, ',', '.') : '-';
                 $incorporacionesP07 = $rowGrupo['incorporaciones_p07'];
-                $metaVentasP08 = $rowGrupo['meta_ventas_p08'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p08'], 0, ',', '.') : '-';
+                $metaVentasP08 = $rowGrupo['meta_ventas_p08'];
+                $metaVentasP08Formateado = $rowGrupo['meta_ventas_p08'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p08'], 0, ',', '.') : '-';
                 $metaIncorporacionesP08 = $rowGrupo['meta_incorporaciones_p08'];
-                $ventasP08 = $rowGrupo['ventas_p08'] !== '-' ? '$' . number_format($rowGrupo['ventas_p08'], 0, ',', '.') : '-';
+                $ventasP08 = $rowGrupo['ventas_p08'];
+                $ventasP08Formateado = $rowGrupo['ventas_p08'] !== '-' ? '$' . number_format($rowGrupo['ventas_p08'], 0, ',', '.') : '-';
                 $incorporacionesP08 = $rowGrupo['incorporaciones_p08'];
-                $metaVentasP09 = $rowGrupo['meta_ventas_p09'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p09'], 0, ',', '.') : '-';
+                $metaVentasP09 = $rowGrupo['meta_ventas_p09'];
+                $metaVentasP09Formateado = $rowGrupo['meta_ventas_p09'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p09'], 0, ',', '.') : '-';
                 $metaIncorporacionesP09 = $rowGrupo['meta_incorporaciones_p09'];
-                $ventasP09 = $rowGrupo['ventas_p09'] !== '-' ? '$' . number_format($rowGrupo['ventas_p09'], 0, ',', '.') : '-';
+                $ventasP09 = $rowGrupo['ventas_p09'];
+                $ventasP09Formateado = $rowGrupo['ventas_p09'] !== '-' ? '$' . number_format($rowGrupo['ventas_p09'], 0, ',', '.') : '-';
                 $incorporacionesP09 = $rowGrupo['incorporaciones_p09'];
-                $metaVentasP10 = $rowGrupo['meta_ventas_p10'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p10'], 0, ',', '.') : '-';
+                $metaVentasP10 = $rowGrupo['meta_ventas_p10'];
+                $metaVentasP10Formateado = $rowGrupo['meta_ventas_p10'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p10'], 0, ',', '.') : '-';
                 $metaIncorporacionesP10 = $rowGrupo['meta_incorporaciones_p10'];
-                $ventasP10 = $rowGrupo['ventas_p10'] !== '-' ? '$' . number_format($rowGrupo['ventas_p10'], 0, ',', '.') : '-';
+                $ventasP10 = $rowGrupo['ventas_p10'];
+                $ventasP10Formateado = $rowGrupo['ventas_p10'] !== '-' ? '$' . number_format($rowGrupo['ventas_p10'], 0, ',', '.') : '-';
                 $incorporacionesP10 = $rowGrupo['incorporaciones_p10'];
-                $metaVentasP11 = $rowGrupo['meta_ventas_p11'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p11'], 0, ',', '.') : '-';
+                $metaVentasP11 = $rowGrupo['meta_ventas_p11'];
+                $metaVentasP11Formateado = $rowGrupo['meta_ventas_p11'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p11'], 0, ',', '.') : '-';
                 $metaIncorporacionesP11 = $rowGrupo['meta_incorporaciones_p11'];
-                $ventasP11 = $rowGrupo['ventas_p11'] !== '-' ? '$' . number_format($rowGrupo['ventas_p11'], 0, ',', '.') : '-';
+                $ventasP11 = $rowGrupo['ventas_p11'];
+                $ventasP11Formato = $rowGrupo['ventas_p11'] !== '-' ? '$' . number_format($rowGrupo['ventas_p11'], 0, ',', '.') : '-';
                 $incorporacionesP11 = $rowGrupo['incorporaciones_p11'];
-                $metaVentasP12 = $rowGrupo['meta_ventas_p12'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p12'], 0, ',', '.') : '-';
+                $metaVentasP12 = $rowGrupo['meta_ventas_p12'];
+                $metaVentasP12Formateado = $rowGrupo['meta_ventas_p12'] !== '-' ? '$' . number_format($rowGrupo['meta_ventas_p12'], 0, ',', '.') : '-';
                 $metaIncorporacionesP12 = $rowGrupo['meta_incorporaciones_p12'];
-                $ventasP12 = $rowGrupo['ventas_p12'] !== '-' ? '$' . number_format($rowGrupo['ventas_p12'], 0, ',', '.') : '-';
+                $ventasP12 = $rowGrupo['ventas_p12'];
+                $ventasP12Formateado = $rowGrupo['ventas_p12'] !== '-' ? '$' . number_format($rowGrupo['ventas_p12'], 0, ',', '.') : '-';
                 $incorporacionesP12 = $rowGrupo['incorporaciones_p12'];
 
                 // Asignar estilos para formato condicional:
+                // (Usar los valores no formateados para comparar)
 
                 $estiloP03 = $ventasP03 == "-" || $incorporacionesP03 == "-" ? "" : ($ventasP03 >= $metaVentasP03 && $incorporacionesP03 >= $metaIncorporacionesP03 ? "text-success" : "text-danger");
                 $estiloP04 = $ventasP04 == "-" || $incorporacionesP04 == "-" ? "" : ($ventasP04 >= $metaVentasP04 && $incorporacionesP04 >= $metaIncorporacionesP04 ? "text-success" : "text-danger");
@@ -406,6 +432,7 @@ ORDER BY
                 $estiloP12 = $ventasP12 == "-" || $incorporacionesP12 == "-" ? "" : ($ventasP12 >= $metaVentasP12 && $incorporacionesP12 >= $metaIncorporacionesP12 ? "text-success" : "text-danger");
 
                 // Mostrar resultados en la tabla con formato condicional:
+                // (Usar los valores formateados para mostrar)
                 echo "
                     <tbody>
                         <tr>
@@ -413,45 +440,45 @@ ORDER BY
                             <td>" . $nombre . "</td>
                             <td>" . $grupo . "</td>
                             <td>" . $nombreLider . "</td>
-                            <td class='" . $estiloP03 . "'>" . $metaVentasP03 . "</td>
+                            <td class='" . $estiloP03 . "'>" . $metaVentasP03Formateado . "</td>
                             <td class='" . $estiloP03 . "'>" . $metaIncorporacionesP03 . "</td>
-                            <td class='" . $estiloP03 . "'>" . $ventasP03 . "</td>
+                            <td class='" . $estiloP03 . "'>" . $ventasP03Formateado . "</td>
                             <td class='" . $estiloP03 . "'>" . $incorporacionesP03 . "</td>
-                            <td class='" . $estiloP04 . "'>" . $metaVentasP04 . "</td>
+                            <td class='" . $estiloP04 . "'>" . $metaVentasP04Formateado . "</td>
                             <td class='" . $estiloP04 . "'>" . $metaIncorporacionesP04 . "</td>
-                            <td class='" . $estiloP04 . "'>" . $ventasP04 . "</td>
+                            <td class='" . $estiloP04 . "'>" . $ventasP04Formateado . "</td>
                             <td class='" . $estiloP04 . "'>" . $incorporacionesP04 . "</td>
-                            <td class='" . $estiloP05 . "'>" . $metaVentasP05 . "</td>
+                            <td class='" . $estiloP05 . "'>" . $metaVentasP05Formateado . "</td>
                             <td class='" . $estiloP05 . "'>" . $metaIncorporacionesP05 . "</td>
-                            <td class='" . $estiloP05 . "'>" . $ventasP05 . "</td>
+                            <td class='" . $estiloP05 . "'>" . $ventasP05Formateado . "</td>
                             <td class='" . $estiloP05 . "'>" . $incorporacionesP05 . "</td>
-                            <td class='" . $estiloP06 . "'>" . $metaVentasP06 . "</td>
+                            <td class='" . $estiloP06 . "'>" . $metaVentasP06Formateado . "</td>
                             <td class='" . $estiloP06 . "'>" . $metaIncorporacionesP06 . "</td>
-                            <td class='" . $estiloP06 . "'>" . $ventasP06 . "</td>
+                            <td class='" . $estiloP06 . "'>" . $ventasP06Formateado . "</td>
                             <td class='" . $estiloP06 . "'>" . $incorporacionesP06 . "</td>
-                            <td class='" . $estiloP07 . "'>" . $metaVentasP07 . "</td>
+                            <td class='" . $estiloP07 . "'>" . $metaVentasP07Formateado . "</td>
                             <td class='" . $estiloP07 . "'>" . $metaIncorporacionesP07 . "</td>
-                            <td class='" . $estiloP07 . "'>" . $ventasP07 . "</td>
+                            <td class='" . $estiloP07 . "'>" . $ventasP07Formateado . "</td>
                             <td class='" . $estiloP07 . "'>" . $incorporacionesP07 . "</td>
-                            <td class='" . $estiloP08 . "'>" . $metaVentasP08 . "</td>
+                            <td class='" . $estiloP08 . "'>" . $metaVentasP08Formateado . "</td>
                             <td class='" . $estiloP08 . "'>" . $metaIncorporacionesP08 . "</td>
-                            <td class='" . $estiloP08 . "'>" . $ventasP08 . "</td>
+                            <td class='" . $estiloP08 . "'>" . $ventasP08Formateado . "</td>
                             <td class='" . $estiloP08 . "'>" . $incorporacionesP08 . "</td>
-                            <td class='" . $estiloP09 . "'>" . $metaVentasP09 . "</td>
+                            <td class='" . $estiloP09 . "'>" . $metaVentasP09Formateado . "</td>
                             <td class='" . $estiloP09 . "'>" . $metaIncorporacionesP09 . "</td>
-                            <td class='" . $estiloP09 . "'>" . $ventasP09 . "</td>
+                            <td class='" . $estiloP09 . "'>" . $ventasP09Formateado . "</td>
                             <td class='" . $estiloP09 . "'>" . $incorporacionesP09 . "</td>
-                            <td class='" . $estiloP10 . "'>" . $metaVentasP10 . "</td>
+                            <td class='" . $estiloP10 . "'>" . $metaVentasP10Formateado . "</td>
                             <td class='" . $estiloP10 . "'>" . $metaIncorporacionesP10 . "</td>
-                            <td class='" . $estiloP10 . "'>" . $ventasP10 . "</td>
+                            <td class='" . $estiloP10 . "'>" . $ventasP10Formateado . "</td>
                             <td class='" . $estiloP10 . "'>" . $incorporacionesP10 . "</td>
-                            <td class='" . $estiloP11 . "'>" . $metaVentasP11 . "</td>
+                            <td class='" . $estiloP11 . "'>" . $metaVentasP11Formateado . "</td>
                             <td class='" . $estiloP11 . "'>" . $metaIncorporacionesP11 . "</td>
-                            <td class='" . $estiloP11 . "'>" . $ventasP11 . "</td>
+                            <td class='" . $estiloP11 . "'>" . $ventasP11Formato . "</td>
                             <td class='" . $estiloP11 . "'>" . $incorporacionesP11 . "</td>
-                            <td class='" . $estiloP12 . "'>" . $metaVentasP12 . "</td>
+                            <td class='" . $estiloP12 . "'>" . $metaVentasP12Formateado . "</td>
                             <td class='" . $estiloP12 . "'>" . $metaIncorporacionesP12 . "</td>
-                            <td class='" . $estiloP12 . "'>" . $ventasP12 . "</td>
+                            <td class='" . $estiloP12 . "'>" . $ventasP12Formateado . "</td>
                             <td class='" . $estiloP12 . "'>" . $incorporacionesP12 . "</td>
                         </tr>
                     </tbody>";
@@ -461,7 +488,9 @@ ORDER BY
             </div>";
         }
     } else {
-        echo "Error: " . $sqlDescendencia . "<br>" . $conn->error;
+        $mensajeError = "Error: " . $sqlDescendencia . "<br>" . $conn->error;
+        error_log($mensajeError, 3, "errores.log");
+        echo "Error: La consulta SQL falló.";
     }
 
     // Cerrar la conexión al finalizar
